@@ -37,11 +37,11 @@ class TasksController < ApplicationController
     end
   end
 
-  def destroy
-    @task.destroy
-
-    flash[:success] = 'タスクが正常に削除されました'
-    redirect_to tasks_url
+ def destroy
+    @micropost.destroy
+    flash[:success] = 'メッセージを削除しました。'
+    redirect_back(fallback_location: root_path)
+  end
   end
 
   private

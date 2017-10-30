@@ -41,8 +41,8 @@ class TasksController < ApplicationController
     @micropost.destroy
     flash[:success] = 'メッセージを削除しました。'
     redirect_back(fallback_location: root_path)
-  end
-  end
+ end
+end
 
   private
   
@@ -54,5 +54,4 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:content,:status)
   end
-end
 
